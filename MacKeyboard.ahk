@@ -33,6 +33,11 @@ F12::SendInput {Volume_Up}
 ;LWin::LAlt
 ;LAlt::LWin ; add a semicolon in front of this line if you want to disable the windows key
 
+; Remap Windows + Tab to Alt + Tab.
+LWin & Tab::AltTab
+; OR remap Alt + Tab for window switching if you uncommented swapping window and alt above
+LAlt & Tab::AltTab
+
 ; Eject Key
 ;F20::SendInput {Insert} ; F20 doesn't show up on AHK anymore, see #3
 
@@ -86,9 +91,6 @@ F19::Run https://facebook.com
 
 ; Close windows (cmd + q to Alt + F4)
 #q::Send !{F4}
-
-; Remap Windows + Tab to Alt + Tab.
-Lwin & Tab::AltTab
 
 ; minimize windows
 #m::WinMinimize,a
